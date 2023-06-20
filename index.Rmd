@@ -37,7 +37,10 @@ xaringanExtra::use_tile_view()
 ```{r, eval=FALSE, echo=FALSE}
 # make pdf of slides
 htmltools::tagList(rmarkdown::html_dependency_jquery())
-xaringanBuilder::build_pdf("./index.Rmd")
+# For renderthis::
+# remotes::install_github('rstudio/chromote')
+# remotes::install_github("jhelvy/renderthis")
+renderthis::to_pdf("./index.Rmd")
 ```
 
 ```{r, echo=FALSE}
@@ -1407,46 +1410,6 @@ example_yes_no_unk
 
 
 ---
-# Thank you!
-.smaller[
-.pull-left[
-+ IDEA
-  + Hansel Tookes, MD MPH, University of Miami
-  + Tyler Bartholomew, PhD, University of Miami 
-  + Belen del Sol Hervera, MPH, University of Miami
-+ .blue[`rUM`]
-  + Gabriel Odom, PhD, Florida International University 
-  + Kyle Grealis, MS, University of Miami
-  + Francisco Cardoza, (almost PhD) University of Miami
-  + Frank Gutierrez, MS, University of Miami
-]
-.pull-right[
-+ .blue[`tidyREDCap`]
-  + Gabriel Odom, PhD, Florida International University 
-  + Anna Calderon, MS, University of Miami
-  + Layla Bouzoubaa, MSPH, Drexel University
-  + Wayne DeFreitas, MS,  University of Miami
-  + Lauren Nahodyl, MS, University of Miami
-  + Lionel Henry, Posit
-  + Davis Vaughan, Posit
-  
-+ All of this work
-  + Daniel Feaster, PhD, University of Miami
-  + The R and R/Medicine community
-  + Lori Balise 
-]]
-
----
-# Funding That Made This Work Possible
-
-+ Healing Communities Study: Developing and Testing an Integrated Approach to Address the Opioid Crisis-New York State. National Institute on Drug Abuse, 1 UM1 DA049415
-+ CTN-0094 Individual Level Predictive Modeling of Opioid Use Disorder Treatment Outcome. Florida Node Alliance of The Drug Abuse Clinical Trials Network (NIDA) UG1 DA013720
-+ University of Miami Center for HIV and Researching Mental Health (CHARM) NIH 1P30MH116867-01A1
-+ University of Miami, Sylvester Comprehensive Cancer Center
-+ Florida International University, Stempel College of Public Health  
-
-
----
 class: segue
 
 03 - Helper Modules for R
@@ -1756,6 +1719,48 @@ Wrapping Up
 + The R package .blue[`rUM`] (available on CRAN) can set up a research project directory complete with a manuscript shell on your computer and is a valuable tool to help teach new researchers how to organize files for a reproducible manuscript.
 + .blue[Quarto] is the next generation of literate programming and reproducible scientific manuscript preparation. It comes packaged with the newest release of RStudio (or available as a stand-alone).
 + The R packages .blue[public.ctn0094data], .blue[public.ctn0094extra], .blue[DOPE], and .blue[CTNote] can be helpful to a) show examples of clinical trials data, b) clean interview notes and other free-text fields where drugs are discussed, and c) summarize long-form UDS/Timeline Followback data and calculate endpoints from these summaries.
+
+
+---
+# Thank you!
+.smaller[
+.pull-left[
++ IDEA
+  + Hansel Tookes, MD MPH, University of Miami
+  + Tyler Bartholomew, PhD, University of Miami 
+  + Belen del Sol Hervera, MPH, University of Miami
++ .blue[`rUM`]
+  + Kyle Grealis, MS, University of Miami
+  + Francisco Cardoza, (almost PhD) University of Miami
+  + Frank Gutierrez, MS, University of Miami
++ .blue[`CTNote`]
+  + Laura Brandt, PhD, City College of New York
+]
+.pull-right[
++ .blue[`tidyREDCap`]
+  + Anna Calderon, MS, University of Miami
+  + Layla Bouzoubaa, MSPH, Drexel University
+  + Wayne DeFreitas, MS,  University of Miami
+  + Lauren Nahodyl, MS, University of Miami
+  + Lionel Henry, Posit
+  + Davis Vaughan, Posit
+  
++ All of this work
+  + Daniel Feaster, PhD, University of Miami
+  + The R and R/Medicine community
+  + Lori Balise and Tremaine Webber
+]]
+
+
+---
+# Funding That Made This Work Possible
+
++ Healing Communities Study: Developing and Testing an Integrated Approach to Address the Opioid Crisis-New York State. National Institute on Drug Abuse, 1 UM1 DA049415
++ CTN-0094 Individual Level Predictive Modeling of Opioid Use Disorder Treatment Outcome. Florida Node Alliance of The Drug Abuse Clinical Trials Network (NIDA) UG1 DA013720
++ University of Miami Center for HIV and Researching Mental Health (CHARM) NIH 1P30MH116867-01A1
++ Florida International University's Research Center in Minority Institution NIMHD Pilot AWD000000009108
++ University of Miami, Sylvester Comprehensive Cancer Center
++ Florida International University, Stempel College of Public Health  
 
 
 ---
