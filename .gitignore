@@ -60,7 +60,6 @@ sasdata/
 libs/
 
 # Exclude .Rmd output
-*.html
 **/figure-html/
 
 # Exclude Text
@@ -145,3 +144,4 @@ _bookdown_files/
 /_site/
 .quarto/
 _site/
+
